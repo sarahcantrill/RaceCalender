@@ -258,3 +258,52 @@ h1 span {
 .driver-content span {
     color: red;
 }
+
+/*driver styling*/
+
+#cars {
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.cars-title {
+    text-align: center; 
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.cars-title::after {
+    content: "";
+    display: block;
+    width: 100px; 
+    height: 4px; 
+    background-color: red; 
+    margin: 10px auto 0;
+}
+
+.car-photo {
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+}
+
+.cars-section {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px;
+    text-align: center;
+}
+
+.car-description {
+    width:40%;
+    background: white;
+    border-radius: 10px;
+    padding:20px;
+    margin: 5%;
+}
