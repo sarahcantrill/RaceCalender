@@ -164,3 +164,29 @@ h1 span {
     background-color: red; 
     margin: 10px auto 0;
 }
+
+.events-intro {
+    text-align: center;
+}
+
+.events-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    padding: 20px;
+}
+
+.event-list {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.event-list li {
+    font-weight: bold; 
+    font-size: 1rem; 
+    margin: 40px 0; 
+    text-transform: uppercase;
+}
