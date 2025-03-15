@@ -2,6 +2,7 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*nav styling*/
 .logo {
     color: red;
     font-size: 1.5em;
@@ -30,6 +31,7 @@ nav a:hover {
     color: red;
 }
 
+/*home styling*/
 h1 {
     color: white;
     text-transform: uppercase;
@@ -67,22 +69,38 @@ h1 span {
     margin-right: 0;
 }
 
+/*nav styling*/
 #about {
     background-color: lightgrey;
     min-height: 90vh;
     padding-top: 30px;
 }
 
-.about-content {
+
+
+.about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 50px;
-    text-align: left;
-    margin-top: 100px;
-    margin-left: 50px;
-    font-size: 1.1em;
+   
   }
+
+  .about-content {
+    align-items: center;
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 1em;
+  }
+
+  
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 50px;
+        height: 100%;
+    }
+  
 
   .about-title {
     text-align: center; 
@@ -92,14 +110,32 @@ h1 span {
     margin-top: 30px;
     margin-bottom: 10px;
     position: relative;
+    text-transform: uppercase;
 }
 
 .about-title::after {
     content: "";
     display: block;
-    width: 100px; /* Adjust width of the red line */
-    height: 4px; /* Thickness of the line */
-    background-color: red; /* Line color */
-    margin: 10px auto 0; /* Centers it below the text */
+    width: 100px; 
+    height: 4px; 
+    background-color: red; 
+    margin: 10px auto 0;
 }
 
+.car-image {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-car-image {
+    width: 65%;
+    height: 65%; 
+    object-fit: cover; 
+    grid-column: 2;
+    margin-left: auto; /* Centers the image horizontally */
+    margin-right: auto;
+    display: block; /* Makes the image a block element, so margin works */
+    align-self: center;
+}
