@@ -69,4 +69,37 @@ h1 span {
 
 #about {
     background-color: lightgrey;
+    min-height: 90vh;
+    padding-top: 30px;
 }
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 50px;
+    font-size: 1.1em;
+  }
+
+  .about-title {
+    text-align: center; 
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.about-title::after {
+    content: "";
+    display: block;
+    width: 100px; /* Adjust width of the red line */
+    height: 4px; /* Thickness of the line */
+    background-color: red; /* Line color */
+    margin: 10px auto 0; /* Centers it below the text */
+}
+
