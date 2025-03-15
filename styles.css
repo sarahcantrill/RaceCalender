@@ -190,3 +190,10 @@ h1 span {
     margin: 40px 0; 
     text-transform: uppercase;
 }
+
+/*driver styling*/
+
+.driver-image{
+    height: 100px;
+    width: 100px;
+}
