@@ -250,7 +250,12 @@ h1 span {
     background-color: #444444;
     padding: 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+
+.driver-card:hover {
+    transform: scale(1.1); 
+  }
 
 .driver-image{
     height: 200px;
@@ -319,7 +324,12 @@ h1 span {
     border-radius: 10px;
     padding:10px;
     margin: 5%;
+    transition: transform 0.3s ease;
 }
+
+.car-description:hover {
+    transform: scale(1.2); 
+  }
 
 
 /*form styling*/
@@ -380,6 +390,49 @@ h1 span {
     margin: 5% auto 0 auto;
     font-size: 1.25em;
 }
+
+#event-display-title {
+    text-align: center; 
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+#event-display-title::after {
+    content: "";
+    display: block;
+    width: 100px; 
+    height: 4px; 
+    background-color: red; 
+    margin: 10px auto 0;
+}
+
+#event-display {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#event-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5%; 
+    justify-content: center; 
+    margin: auto;
+}
+
+#event-container {
+    font-size: 1em;
+    padding: 1%;
+    border: 2px solid #ddd;
+    border-radius: 10%;
+    display: inline-block;
+}
+
+
 
 /*footer styling*/
 

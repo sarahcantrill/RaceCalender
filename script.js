@@ -42,7 +42,7 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
 });
 
     function displayEvent(event) {
-        const eventSubmission = document.getElementById('event-submission');
+        const eventSubmission = document.getElementById('event-container');
         eventSubmission.innerHTML = `
         <strong>Event Name:</strong> ${event.name} <br>
         <strong>Event Type:</strong> ${event.type} <br>
