@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     
     window.addEventListener('scroll', function() {
+
         if (window.scrollY > 50) { 
             nav.classList.add('nav-scrolled');
         } else {
             nav.classList.remove('nav-scrolled');
         }
 
+        //detects current position
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop - navHeight - 10;
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('event-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
+    //values from form
     const name = document.getElementById('event-name').value;
     const type = document.getElementById('event-type').value;
     const track = document.getElementById('event-track').value;
@@ -45,6 +48,7 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
 
     const dateTime = new Date(`${date}T${time}`); //combine date and time
 
+    //create new event object 
     const newEvent = {
         name,
         type,
@@ -62,17 +66,19 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
 
     function displayEvent(event) {
 
+        //get reguired elements 
         const eventSubmission = document.getElementById('event-container');
         const eventDisplay = document.getElementById('event-display');
         eventDisplay.style.display = 'block'; 
 
+        //create container
         const eventContainer = document.createElement("div");
         eventContainer.className = "event-container";
 
         const eventId = 'event-' + Date.now();
         eventContainer.id = eventId;
 
-        // Add the event details to the new event container
+        //event details add to the new event container
         eventContainer.innerHTML = `
         <div class="event-content">
         <strong>Event Name:</strong> ${event.name} <br>
@@ -90,14 +96,21 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
         `;
 
         document.getElementById('event-submissions').appendChild(eventContainer);
+
+        //event listener for the delete button
+        const deleteButton = eventContainer.querySelector(".delete-btn");
+        deleteButton.addEventListener("click", function() {
+            deleteEvent(eventId);
+        });
     }
 
+    //removes event when delete is clickes
     function deleteEvent(eventId) {
         const eventToDelete = document.getElementById(eventId);
         if (eventToDelete) {
             eventToDelete.remove();
             
-            // Hide the event display if no events are left
+            //hide display if no events
             const eventSubmissions = document.getElementById('event-submissions');
             if (eventSubmissions.children.length === 0) {
                 document.getElementById('event-display').style.display = 'none';
