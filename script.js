@@ -3,6 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('nav');
     const navHeight = nav.offsetHeight;
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) { 
@@ -10,6 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             nav.classList.remove('nav-scrolled');
         }
+
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - navHeight - 10;
+            const sectionHeight = section.clientHeight;
+            if(window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        // Update active navigation link
+        navLinks.forEach(link => {
+            link.classList.remove('active-nav');
+            if(link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active-nav');
+            }
+        });
     });
 });
 

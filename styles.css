@@ -34,6 +34,10 @@ nav a:hover {
     color: red;
 }
 
+nav a.active-nav {
+    color: red;
+}
+
 .nav-scrolled {
     position: fixed;
     top: 0;
