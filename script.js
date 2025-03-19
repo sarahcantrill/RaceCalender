@@ -24,6 +24,33 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
     const driversSelect = document.getElementById('event-drivers');
     const selectedDriver = driversSelect.options[driversSelect.selectedIndex].text;
 
-    const dateTime = new Date(`${date}T${time}`); 
+    const dateTime = new Date(`${date}T${time}`); //combine date and time
 
-}
+    const newEvent = {
+        name,
+        type,
+        track,
+        date: dateTime.toLocaleDateString(),
+        time: dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        driver: selectedDriver,
+    };
+
+    displayEvent(newEvent);
+
+    this.reset(); //clean form after submission
+
+});
+
+    function displayEvent(event) {
+        const eventSubmission = document.getElementById('event-submission');
+        eventSubmission.innerHTML = `
+        <strong>Event Name:</strong> ${event.name} <br>
+        <strong>Event Type:</strong> ${event.type} <br>
+        <strong>Track:</strong> ${event.track} <br>
+        <strong>Date:</strong> ${event.date} <br>
+        <strong>Time:</strong> ${event.time} <br>
+        <strong>Driver:</strong> ${event.driver} <br>
+        `;
+    }
+
+
