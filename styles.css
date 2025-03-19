@@ -396,7 +396,7 @@ h1 span {
 }
 
 #event-display {
-    display: none; /* Hide the event display section initially */
+    display: none; 
 }
 
 #event-display-title {
@@ -404,7 +404,8 @@ h1 span {
     font-size: 2rem;
     font-weight: bold;
     position: relative;
-    margin-bottom: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     position: relative;
     text-transform: uppercase;
     padding-bottom: 20px;
@@ -427,20 +428,46 @@ h1 span {
 #event-submissions {
     display: flex;
     flex-wrap: wrap; 
-    gap: 5%; 
+    gap: 5%;
     justify-content: center; 
     margin: auto;
 }
 
 .event-container {
     font-size: 1em;
-    padding: 1%;
+    padding: 3%;
     border: 2px solid #ddd;
     border-radius: 10%;
     display: inline-block;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
+.event-container:hover {
+    transform: scale(1.5)
+}
+
+.event-actions {
+    display: none;
+    gap: 1%;
+}
+
+.event-container:hover .event-actions {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-btn, .delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin: auto 0;
+    margin-top: 3%;
+}
 
 
 /*footer styling*/

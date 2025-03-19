@@ -69,17 +69,38 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
         const eventContainer = document.createElement("div");
         eventContainer.className = "event-container";
 
+        const eventId = 'event-' + Date.now();
+        eventContainer.id = eventId;
+
         // Add the event details to the new event container
         eventContainer.innerHTML = `
+        <div class="event-content">
         <strong>Event Name:</strong> ${event.name} <br>
         <strong>Event Type:</strong> ${event.type} <br>
         <strong>Track:</strong> ${event.track} <br>
         <strong>Date:</strong> ${event.date} <br>
         <strong>Time:</strong> ${event.time} <br>
         <strong>Driver:</strong> ${event.driver} <br>
+        </div>
+        
+       <div class="event-actions">
+        <button class="edit-btn" onclick="editEvent('${eventId}')">Edit</button>
+        <button class="delete-btn" onclick="deleteEvent('${eventId}')">Delete</button>
+        </div>
         `;
 
         document.getElementById('event-submissions').appendChild(eventContainer);
     }
 
-
+    function deleteEvent(eventId) {
+        const eventToDelete = document.getElementById(eventId);
+        if (eventToDelete) {
+            eventToDelete.remove();
+            
+            // Hide the event display if no events are left
+            const eventSubmissions = document.getElementById('event-submissions');
+            if (eventSubmissions.children.length === 0) {
+                document.getElementById('event-display').style.display = 'none';
+            }
+        }
+    }
