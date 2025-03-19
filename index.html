@@ -16,7 +16,8 @@
                 <a href="#events"aria-label="events-nav">Events</a>
                 <a href="#drivers"aria-label="drivers-nav">Drivers</a>
                 <a href="#cars"aria-label="events-nav">Our Cars</a>
-                <a href="#contact"aria-label="events-nav">Contact Us</a>
+                <!-- <a href="#contact"aria-label="events-nav">Contact Us</a> -->
+                <a href="#calender-system"aria-label="calendar-system">Create Event</a>
         </nav>
     </header>
 
@@ -123,26 +124,28 @@
         <form id="event-form">
             
             <label for="event-name">Event Name:</label>
-            <input type="text" id="event-name" name="event-name" required>
+            <input type="text" id="event-name" name="event-name" placeholder="Add event name here, for example: 24 hour Le Mans" required>
 
             <label for="event-type">Event Type:</label>
             <select id="event-type" required>
+                <option value="" disabled selected>Please select an Event Type</option>
                 <option value="Race">Race</option>
                 <option value="Qualifying">Qualifying</option>
                 <option value="Practice">Practice</option>
             </select>
 
             <label for="event-track">Track:</label>
-            <input type="text" id="event-track" name="event-track" required>
+            <input type="text" id="event-track" name="event-track" placeholder="Add the track name here, for example: Silverstone" required>
 
             <label for="event-date">Event Date:</label>
-            <input type="text" id="event-date" name="event-date" required>
+            <input type="text" id="event-date" name="event-date" placeholder="Please select a date" required>
 
             <label for="event-time">Event Time:</label>
-            <input type="time" id="event-time" name="event-time" required>
+            <input type="time" id="event-time" name="event-time" value="00:00" required>
 
             <label for="event-drivers">Select Drivers:</label>
             <select id="event-drivers" required>
+                <option value="" disabled selected>Please select a driver</option>
                 <option value="alex_hartman">Alex Hartmann</option>
                 <option value="daniel_siva">Daniel Siva</option>
                 <option value="sophia_langely">Sophia Langely</option>
