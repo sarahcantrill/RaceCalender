@@ -316,12 +316,54 @@ h1 span {
 }
 
 .footer-content {
-    display: flex;           /* Change from grid to flex */
-    justify-content: space-evenly;  /* Distribute items evenly */
+    display: flex;         
+    justify-content: space-between; 
     align-items: flex-start;
     gap: 10%;              
     padding: 20px;  
     margin-left: 10%; 
     margin-right: 10%; 
+}
+
+.branding {
+    flex: 1;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.socials {
+    list-style-type: none; 
+    padding: 0; 
+    text-align: left;
+}
+
+.socials a {
+    display: block; 
+    color: white; 
+    margin: 10px;
+    text-decoration: none; 
+    font-size: 0.75em;
+}
+
+.find-us p {
+    font-size: 0.75em;
+}
+
+.branding p {
+    font-size: 0.75em;
+}
+
+.contact-us p {
+    font-size: 0.75em;
+}
+
+.contact-us {
+    text-align: left;
 }
 
