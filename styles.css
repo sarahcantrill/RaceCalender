@@ -391,6 +391,10 @@ h1 span {
     font-size: 1.25em;
 }
 
+#event-display {
+    display: none; /* Hide the event display section initially */
+}
+
 #event-display-title {
     text-align: center; 
     font-size: 2rem;
