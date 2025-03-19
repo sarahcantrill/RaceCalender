@@ -1,5 +1,7 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /*nav styling*/
@@ -45,7 +47,7 @@ h1 span {
 
 #home {
     background-color: #444444;
-    min-height: 90vh;
+    min-height: 95vh;
     display: grid;
     justify-content: center;
     align-items: start;
@@ -306,6 +308,58 @@ h1 span {
     border-radius: 10px;
     padding:20px;
     margin: 5%;
+}
+
+
+/*form styling*/
+
+#calender-system {
+    background-color: white;
+    padding: 5%;
+}
+
+#event-form {
+    display: grid;
+    grid-template-columns: 1fr; /* One column spanning full width */
+    gap: 10px; /* Adds spacing between elements */
+    margin: auto 0;
+}
+
+.calendar-system-title {
+    text-align: center; 
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.calendar-system-title::after {
+    content: "";
+    display: block;
+    width: 100px; 
+    height: 4px; 
+    background-color: red; 
+    margin: 10px auto 0;
+}
+
+#create-event-btn {
+    width: 10%;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+input, select {
+    width: 50%;
 }
 
 /*footer styling*/
