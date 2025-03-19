@@ -19,6 +19,7 @@ nav {
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Increased transition time to 0.5s */
 }
 
 nav a {
@@ -31,6 +32,14 @@ nav a {
 
 nav a:hover {
     color: red;
+}
+
+.nav-scrolled {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, top 0.5s ease-in-out; /* Increased transition time */
 }
 
 /*home styling*/
@@ -349,8 +358,7 @@ h1 span {
 }
 
 #event-form input, 
-#event-form select, 
-#event-form button {
+#event-form select {
     width: 100%; 
     padding: 12px; 
     font-size: 16px; 
@@ -368,6 +376,7 @@ h1 span {
     cursor: pointer;
     display: block;
     margin: 5% auto 0 auto;
+    font-size: 1.25em;
 }
 
 /*footer styling*/
