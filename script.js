@@ -42,10 +42,16 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
 });
 
     function displayEvent(event) {
+
         const eventSubmission = document.getElementById('event-container');
         const eventDisplay = document.getElementById('event-display');
         eventDisplay.style.display = 'block'; 
-        eventSubmission.innerHTML = `
+
+        const eventContainer = document.createElement("div");
+        eventContainer.className = "event-container";
+
+        // Add the event details to the new event container
+        eventContainer.innerHTML = `
         <strong>Event Name:</strong> ${event.name} <br>
         <strong>Event Type:</strong> ${event.type} <br>
         <strong>Track:</strong> ${event.track} <br>
@@ -53,6 +59,8 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
         <strong>Time:</strong> ${event.time} <br>
         <strong>Driver:</strong> ${event.driver} <br>
         `;
+
+        document.getElementById('event-submissions').appendChild(eventContainer);
     }
 
 

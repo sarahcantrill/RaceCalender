@@ -420,7 +420,7 @@ h1 span {
     margin: 0 auto;
 }
 
-#event-container {
+#event-submissions {
     display: flex;
     flex-wrap: wrap; 
     gap: 5%; 
@@ -428,12 +428,13 @@ h1 span {
     margin: auto;
 }
 
-#event-container {
+.event-container {
     font-size: 1em;
     padding: 1%;
     border: 2px solid #ddd;
     border-radius: 10%;
     display: inline-block;
+    box-sizing: border-box;
 }
 
 
