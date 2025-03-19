@@ -306,7 +306,7 @@ h1 span {
     width:40%;
     background: white;
     border-radius: 10px;
-    padding:20px;
+    padding:10px;
     margin: 5%;
 }
 
@@ -315,14 +315,17 @@ h1 span {
 
 #calender-system {
     background-color: white;
-    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 7%;
 }
 
 #event-form {
     display: grid;
-    grid-template-columns: 1fr; /* One column spanning full width */
-    gap: 10px; /* Adds spacing between elements */
-    margin: auto 0;
+    grid-template-columns: 1fr;
+    gap: 10px; 
+    width: 60%; 
+    margin: 0 auto; 
+    text-align: left;
 }
 
 .calendar-system-title {
@@ -345,8 +348,17 @@ h1 span {
     margin: 10px auto 0;
 }
 
+#event-form input, 
+#event-form select, 
+#event-form button {
+    width: 100%; 
+    padding: 12px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+}
+
 #create-event-btn {
-    width: 10%;
+    width: 20%;
     background-color: red;
     color: white;
     padding: 10px;
@@ -355,11 +367,7 @@ h1 span {
     font-weight: bold;
     cursor: pointer;
     display: block;
-    margin: 0 auto;
-}
-
-input, select {
-    width: 50%;
+    margin: 5% auto 0 auto;
 }
 
 /*footer styling*/
