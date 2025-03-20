@@ -333,7 +333,14 @@ h1 span {
 
 .car-description:hover {
     transform: scale(1.2); 
+    padding: 3%;
+    transition: transform 0.5s ease-in-out; 
   }
+
+.car-description:hover img {
+transform: scale(1.2);
+transition: transform 0.3s ease-in-out; 
+}
 
 
 /*form styling*/
