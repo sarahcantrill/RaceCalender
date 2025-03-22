@@ -114,6 +114,7 @@ h1 {
     text-transform: uppercase;
     font-size: 3rem;
     margin-bottom: 1px;
+    line-height: 1;
 }
 
 h1 span {
@@ -129,7 +130,7 @@ h1 span {
     justify-content: center;
     align-items: start;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: left;
     padding-left: 5%;
     padding-right: 5%;;
@@ -139,6 +140,7 @@ h1 span {
     margin: 0;
     padding: 0;
     line-height: 1.2;
+    display: flex;
 }
 
 #home p  {
