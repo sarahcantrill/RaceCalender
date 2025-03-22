@@ -32,6 +32,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const scrollArrow = document.createElement("div")
+    scrollArrow.className = "scroll-arrow"
+    scrollArrow.innerHTML = `
+      <div class="arrow-small"></div>
+      <div class="arrow-large"></div>
+    `
+  
+    // Add the scroll arrow to the home section
+    const homeSection = document.getElementById("home")
+    homeSection.appendChild(scrollArrow)
+  
+    // Hide the arrow when user scrolls down
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        scrollArrow.classList.add("hidden")
+      } else {
+        scrollArrow.classList.remove("hidden")
+      }
+    })
+  
+    // Scroll to the about section when arrow is clicked
+    scrollArrow.addEventListener("click", () => {
+      document.getElementById("about").scrollIntoView({
+        behavior: "smooth",
+      })
+    })
+
 });
 
 document.getElementById('event-form').addEventListener('submit', function(e) {
