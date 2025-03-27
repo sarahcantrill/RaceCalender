@@ -378,7 +378,7 @@ h1 span {
 .car-photo {
     height: 200px;
     width: 200px;
-    border-radius: 10%;
+    /* border-radius: 10%; */
 }
 
 .cars-section {
@@ -389,9 +389,11 @@ h1 span {
 }
 
 .car-description {
-    width:40%;
+    width:50%;
     background: white;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border: red;
+    /* border-color: red; */
     padding:10px;
     margin: 5%;
     transition: transform 0.3s ease;
