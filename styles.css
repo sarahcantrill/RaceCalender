@@ -281,7 +281,7 @@ h1 span {
 
 #drivers {
     min-height: 75vh;
-    background-color: black;
+    background-color: #444444;
     color: white;
     padding: 30px;
 }
@@ -347,23 +347,18 @@ h1 span {
     color: red;
 }
 
-/*driver styling*/
-
+/*car styling*/
 #cars {
-    background-color: lightgrey;
-    padding: 20px;
+    background-color: black;
+    /* padding: 20px 0; */
+    padding-top: 10px;
+    text-align: center;
 }
 
 .cars-title {
-    text-align: center; 
-    font-size: 2rem;
-    font-weight: bold;
-    position: relative;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    position: relative;
+    color: white;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .cars-title::after {
@@ -375,40 +370,106 @@ h1 span {
     margin: 10px auto 0;
 }
 
-.car-photo {
-    height: 200px;
-    width: 200px;
-    /* border-radius: 10%; */
-}
-
 .cars-section {
-    display: flex; 
-    justify-content: space-between; 
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    width: 100%;
 }
 
 .car-description {
-    width:50%;
-    background: white;
-    /* border-radius: 10px; */
-    border: red;
-    /* border-color: red; */
-    padding:10px;
-    margin: 5%;
-    transition: transform 0.3s ease;
+    position: relative;
+    width: 50%;
+    height: 80vh;
+    overflow: hidden;
 }
 
-.car-description:hover {
-    transform: scale(1.2); 
-    padding: 3%;
-    transition: transform 0.5s ease-in-out; 
-  }
-
-.car-description:hover img {
-transform: scale(1.2);
-transition: transform 0.3s ease-in-out; 
+.car-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 8s ease-in-out;
 }
+
+.car-name {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.car-bio {
+    position: absolute;
+    top: 20%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.car-description::before,
+.car-description::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+}
+
+.car-description::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: width 1s linear;
+}
+
+.car-description::after {
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 0;
+    transition: height 1s linear 1s;
+}
+
+.car-description::after {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: width 1s linear 2s;
+}
+
+.car-description::before {
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    transition: height 1s linear 3s;
+}
+
+.car-description:hover::before {
+    width: 100%;
+}
+
+.car-description:hover::after {
+    height: 100%;
+}
+
+.car-description:hover .car-photo {
+    transform: scale(1.1);
+}
+
+.car-description.active .car-bio {
+    opacity: 1;
+}
+
 
 
 /*form styling*/

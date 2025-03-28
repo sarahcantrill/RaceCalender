@@ -145,3 +145,16 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
             }
         }
     }
+
+    document.querySelectorAll(".car-description").forEach((car) => {
+        car.addEventListener("mouseenter", () => {
+            setTimeout(() => {
+                car.classList.add("active");
+            }, 3000); 
+        });
+    
+        car.addEventListener("mouseleave", () => {
+            car.classList.remove("active");
+        });
+    });
+    
