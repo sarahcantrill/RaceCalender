@@ -415,50 +415,75 @@ h1 span {
     transition: opacity 0.5s ease-in-out;
 }
 
-.car-description::before,
-.car-description::after {
-    content: "";
+/* Border animation container */
+.car-description .border-animation {
     position: absolute;
-    background-color: red;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none; /* Allow clicks to pass through */
 }
 
-.car-description::before {
+/* Top border */
+.car-description .border-top {
+    position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 4px;
+    background-color: red;
     transition: width 1s linear;
 }
 
-.car-description::after {
+/* Right border */
+.car-description .border-right {
+    position: absolute;
     top: 0;
     right: 0;
     width: 4px;
     height: 0;
+    background-color: red;
     transition: height 1s linear 1s;
 }
 
-.car-description::after {
+/* Bottom border */
+.car-description .border-bottom {
+    position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 0;
     height: 4px;
+    background-color: red;
     transition: width 1s linear 2s;
 }
 
-.car-description::before {
+/* Left border */
+.car-description .border-left {
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 4px;
     height: 0;
+    background-color: red;
     transition: height 1s linear 3s;
 }
 
-.car-description:hover::before {
+/* Hover animations */
+.car-description:hover .border-top {
     width: 100%;
 }
 
-.car-description:hover::after {
+.car-description:hover .border-right {
+    height: 100%;
+}
+
+.car-description:hover .border-bottom {
+    width: 100%;
+}
+
+.car-description:hover .border-left {
     height: 100%;
 }
 
@@ -469,8 +494,6 @@ h1 span {
 .car-description.active .car-bio {
     opacity: 1;
 }
-
-
 
 /*form styling*/
 
