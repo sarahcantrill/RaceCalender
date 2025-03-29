@@ -150,7 +150,7 @@ document.getElementById('event-form').addEventListener('submit', function(e) {
         car.addEventListener("mouseenter", () => {
             setTimeout(() => {
                 car.classList.add("active");
-            }, 3000); 
+            }, 2000); 
         });
     
         car.addEventListener("mouseleave", () => {

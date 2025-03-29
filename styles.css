@@ -432,7 +432,7 @@ h1 span {
     width: 0;
     height: 2px;
     background-color: red;
-    transition: width 1s linear;
+    transition: width 0.5s linear;
 }
 
 .car-description .border-right {
@@ -442,7 +442,7 @@ h1 span {
     width: 2px;
     height: 0;
     background-color: red;
-    transition: height 1s linear 1s;
+    transition: height 0.5s linear 0.5s;
 }
 
 .car-description .border-bottom {
@@ -452,7 +452,7 @@ h1 span {
     width: 0;
     height: 2px;
     background-color: red;
-    transition: width 1s linear 2s;
+    transition: width 0.5s linear 1s;
 }
 
 .car-description .border-left {
@@ -462,7 +462,7 @@ h1 span {
     width: 2px;
     height: 0;
     background-color: red;
-    transition: height 1s linear 3s;
+    transition: height 0.5s linear 1.5s;
 }
 
 .car-description:hover .border-top {
@@ -488,6 +488,27 @@ h1 span {
 .car-description.active .car-bio {
     opacity: 1;
 }
+
+.car-description:not(:hover) .border-top {
+    width: 0;
+    transition: width 0.5s linear 1.5s; 
+}
+
+.car-description:not(:hover) .border-right {
+    height: 0;
+    transition: height 0.5s linear 1s; 
+}
+
+.car-description:not(:hover) .border-bottom {
+    width: 0;
+    transition: width 0.5s linear 0.5s; 
+}
+
+.car-description:not(:hover) .border-left {
+    height: 0;
+    transition: height 0.5s linear 0s; 
+}
+
 
 /*form styling*/
 
