@@ -278,16 +278,15 @@ h1 span {
 }
 
 /*driver styling*/
-
 #drivers {
     min-height: 75vh;
     background-color: #444444;
     color: white;
     padding: 30px;
-}
-
-.drivers-title {
-    text-align: center; 
+  }
+  
+  .drivers-title {
+    text-align: center;
     font-size: 2rem;
     font-weight: bold;
     position: relative;
@@ -296,56 +295,84 @@ h1 span {
     position: relative;
     text-transform: uppercase;
     padding-bottom: 20px;
-}
-
-.drivers-title::after {
+  }
+  
+  .drivers-title::after {
     content: "";
     display: block;
-    width: 100px; 
-    height: 4px; 
-    background-color: red; 
+    width: 100px;
+    height: 4px;
+    background-color: red;
     margin: 10px auto 0;
-}
-
-.drivers-section{
-    display: flex; 
-    justify-content: space-around; 
+  }
+  
+  .drivers-section {
+    display: flex;
+    justify-content: space-around;
     gap: 20px;
     padding: 20px;
     text-align: center;
-}
-
-.driver-card {
+  }
+  
+  .driver-card {
     width: 20%;
     background-color: #444444;
     padding: 20px;
-    /* border-radius: 10px; */
     transition: transform 0.3s ease;
-}
-
-.driver-card:hover {
-    transform: scale(1.1); 
+    position: relative;
   }
-
-.driver-image{
+  
+  .driver-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .driver-image {
     height: 200px;
     width: 200px;
-    /* border-radius: 10%; */
-}
-
-.driver-intro {
+  }
+  
+  .driver-name {
     text-align: center;
-}
-
-.driver-content {
+    margin-bottom: 15px;
+  }
+  
+  .flag-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .driver-bio {
+    position: absolute;
+    bottom: 20px; 
+    left: 20px;
+    right: 20px;
+    height: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+  
+  .driver-card:hover .driver-bio {
+    opacity: 1;
+  }
+  
+  .driver-card:hover .flag-image {
+    opacity: 0;
+  }
+  
+  .driver-content {
     text-align: center;
     font-weight:bold;
     text-transform: uppercase;
-}
-
-.driver-content span {
-    color: red;
-}
+ }  
 
 /*car styling*/
 #cars {
